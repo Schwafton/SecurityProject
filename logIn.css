@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 30rem;
+    height: 40rem;
+    border: solid 2px red;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-direction: column;
+}
+input {
+    height: 2rem;
+    width: 15rem;
+    padding: 0.5rem;  
+}

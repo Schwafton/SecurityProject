@@ -7,17 +7,24 @@
     <title>Log In</title>
   </head>
   <body>
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : 'wordle-id',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v15.0'
+          });
+        };
+      </script>
+      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     <form action="">
       <header>Log In</header>
       <label for="username"></label>
       <input type="text" id="username" placeholder="username" />
       <label for="password"></label>
       <input type="text" id="password" placeholder="password" />
-      <div class="container">
-        <a class="btn btn-lg btn-social btn-facebook">
-          <i class="fa fa-facebook fa-fw"></i> Sign in with Facebook
-        </a>
-      </div>
+      <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
     </form>
   </body>
 </html>

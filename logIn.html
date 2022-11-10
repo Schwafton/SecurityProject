@@ -5,26 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="logIn.css" />
     <title>Log In</title>
+    <script src="./logIn.js" async defer></script>
   </head>
   <body>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId            : 'wordle-id',
-            autoLogAppEvents : true,
-            xfbml            : true,
-            version          : 'v15.0'
-          });
-        };
-      </script>
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
     <form action="">
-      <header>Log In</header>
+      <header id="header">Log In</header>
       <label for="username"></label>
       <input type="text" id="username" placeholder="username" />
       <label for="password"></label>
       <input type="text" id="password" placeholder="password" />
-      <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
+      <div
+        class="fb-login-button"
+        data-width=""
+        data-size="large"
+        data-button-type="continue_with"
+        data-layout="default"
+        data-auto-logout-link="false"
+        data-use-continue-as="false"
+      ></div>
     </form>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "wordle-id",
+          autoLogAppEvents: true,
+          xfbml: true,
+          version: "v15.0",
+        });
+      };
+      function popUp() {
+        alert("poo");
+      }
+    //   let input = document.getElementById("username");
+    //   console.log(input);
+    //   let head = document.getElementById("header");
+    //   console.log(head);
+    </script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
   </body>
 </html>

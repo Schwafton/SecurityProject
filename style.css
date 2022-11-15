@@ -13,6 +13,14 @@ body {
   background-color: #fff;
 }
 
+nav {
+  /* border: solid 2px black; */
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 p {
   color: black;
   text-align: center;

@@ -33,6 +33,11 @@ input {
     height: 2rem;
     width: 15rem;
     padding: 0.5rem;  
+    border-radius: 15px;
+    border: solid 1px gray;
+}
+.fake-button {
+    margin: 0.25rem;
 }
 button {
     width: 15rem;

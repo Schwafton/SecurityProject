@@ -51,6 +51,12 @@ p {
   border-radius: 10%;
 }
 
+.board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 table.buttons {
   border: none;
 }

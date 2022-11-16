@@ -14,7 +14,7 @@ body {
 form {
     width: 25rem;
     height: 35rem;
-    border: solid 5px #dddddd;
+    border: solid 4.5px #dddddd;
     border-radius: 15px;
     display: flex;
     align-items: center;

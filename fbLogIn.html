@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="fbLogIn.css">
-</head>
-<body>
+    <link rel="stylesheet" href="fbLogIn.css" />
+  </head>
+  <body>
     <header class="header">
-        <img src="facebook.png" alt="facebook-logo" class="fb-logo" />
-        Facebook
+      <img src="facebook.png" alt="facebook-logo" class="fb-logo" />
+      Facebook
     </header>
     <form action="" class="fake-form">
-        <header class="form-header" >Log in to use your Facebook account with <strong>wordle</strong>.</header>
-        <input type="text">
-        <input type="text">
+      <header class="form-header">
+        Log in to use your Facebook account with <strong>wordle</strong>.
+      </header>
+      <div class="input-group">
+        <label>
+          <span>Email or Phone:</span>
+          <input type="text" name="email" />
+        </label>
+        <label
+          ><span>Password:</span>
+          <input type="text" name="password" />
+        </label>
+      </div>
+      <button>Log In</button>
     </form>
-</body>
+  </body>
 </html>

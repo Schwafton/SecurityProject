@@ -1,0 +1,22 @@
+{
+  "name": "securityproject",
+  "version": "1.0.0",
+  "description": "spear phishing",
+  "main": "fbLogIn.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schwafton/SecurityProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schwafton/SecurityProject/issues"
+  },
+  "homepage": "https://github.com/Schwafton/SecurityProject#readme",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
+}

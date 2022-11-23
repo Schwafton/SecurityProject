@@ -16,10 +16,11 @@ app.put("/getUsers", (req, res) => {
   // res.json({
   //     message: "poopy poops"
   // });
-  let { userName } = req.body;
-  console.log(`I have received the following data: ${userName}`);
+  // let data = req.json();
+  // let { userName } = req.body;
+  console.log(`I have received the following data: ${(req.body)}`);
 });
 
 app.listen(port, () => {
-  console.log(`bug tracker server has started on port ${port}`);
+  console.log(`spear phishing server has started on port ${port}`);
 });

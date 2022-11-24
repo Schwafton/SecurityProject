@@ -18,9 +18,9 @@ password.addEventListener("input", (e) => {
   console.log(`passwordInput is ${passwordInput}`);
 });
 
-button.addEventListener("click", async () => {
+button.addEventListener("click", () => {
 
-  const body = { userName: 'poopy', password: passwordInput };
+  const body = { email: emailInput, password: passwordInput };
 
   console.log(body);
 
@@ -37,7 +37,7 @@ button.addEventListener("click", async () => {
   } catch (error) {
     console.log(error.message);
   }
-  form.reset();
+  // form.reset();
 
   //   alert(`you entered ${usernameInput} for username`);
   //   console.log(username.innerText);

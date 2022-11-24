@@ -32,13 +32,9 @@ button.addEventListener("click", () => {
         },
         body: JSON.stringify(body)
     });
-    // let resObj = await response.json();
-    // console.log(resObj);
   } catch (error) {
     console.log(error.message);
   }
   // form.reset();
 
-  //   alert(`you entered ${usernameInput} for username`);
-  //   console.log(username.innerText);
 });

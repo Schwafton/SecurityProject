@@ -44,9 +44,6 @@ input {
     border-radius: 15px;
     border: solid 1px gray;
 }
-.fake-button {
-    margin: 0.25rem;
-}
 button {
     width: 15rem;
     height: 2.5rem;

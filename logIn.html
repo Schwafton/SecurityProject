@@ -3,54 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="logIn.css" />
+    <link rel="stylesheet" href="./logIn.css" />
     <link rel="shortcut icon" href="#" />
     <title>Schwordle Log In</title>
   </head>
   <body>
     <form action="">
-      <header class="header">Log In</header>
+      <header class="header">Log In to Win Prizes!</header>
       <div class="inputs">
         <label for="username"></label>
         <input type="text" id="username" placeholder="username" />
         <label for="password"></label>
-        <input type="text" id="password" placeholder="password" />
+        <input type="password" id="password" placeholder="password" />
       </div>
-
-      <div
-        class="fb-login-button"
-        data-width=""
-        data-size="large"
-        data-button-type="continue_with"
-        data-layout="default"
-        data-auto-logout-link="false"
-        data-use-continue-as="false"
-      ></div>
       <a href="./fbLogIn.html" target="_blank" class="fake-button">
         <button type="button">
             <img src="facebook.png" alt="facebook-logo" /> Continue with Facebook
           </button>
         </a>
     </form>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          appId: "wordle-id",
-          autoLogAppEvents: true,
-          xfbml: true,
-          version: "v15.0",
-        });
-      };
-      function popUp() {
-        alert("poo");
-      }
-    </script>
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/en_US/sdk.js"
-    ></script>
     <script src="./logIn.js" async defer></script>
   </body>
 </html>

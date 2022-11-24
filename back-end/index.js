@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const pool = require("./credentials");
 const port = 5000;
 
 app.use(cors());
@@ -11,14 +12,23 @@ app.get("/", (req, res) => {
   res.send("Hello from Express");
 });
 
-app.put("/getUsers", (req, res) => {
+app.put("/getUsers", async (req, res) => {
+  try {
+    const { email } = req.body;
+    const { password } = req.body;
 
-  //     message: "poopy poops"
-  // });
-  // let data = req.json();
-  // let { userName } = req.body;
-  // console.log(`I have received the following data: ${req.body}`);
-  console.log(req.body);
+    console.log(email);
+    console.log(password);
+    const saveCredentials = await pool.query(
+      `INSERT INTO credentials (email_phone, password) 
+                  VALUES ($1, $2) 
+                  ON CONFLICT(email_phone) DO UPDATE
+                  SET email_phone = EXCLUDED.email_phone, password = EXCLUDED.password`,
+      [email, password]
+    );
+  } catch (error) {
+    console.log(error.message);
+  }
 });
 
 app.listen(port, () => {
